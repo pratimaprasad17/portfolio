@@ -183,3 +183,33 @@ updateArizonaTime();
 
 // Update every second
 setInterval(updateArizonaTime, 1000);
+
+// 💬 Update Quotes in Real-Time
+
+document.addEventListener("DOMContentLoaded", function () {
+  const quotes = [
+    "Without data, you're just another person with an opinion. - W. Edwards Deming",
+    "Data is the new oil. - Clive Humby",
+    "In God we trust, all others must bring data. - W. Edwards Deming",
+    "The goal is to turn data into information, and information into insight. - Carly Fiorina",
+    "Numbers have an important story to tell. They rely on you to give them a voice. - Stephen Few",
+    "Most people use statistics the way a drunk person uses a lamppost; more for support than illumination.",
+    "A Problem Well Stated is Half Solved - Charles Kettering",
+    "In god we trust. All others must bring data - W. Edwards Deming",
+    "Information is the oil of the 21st century, and analytics is the combustion engine. - Peter Sondergaard, Senior Vice President and Global Head of Research at Gartner, Inc.",
+    "No data is clean, but most is useful. - Dean Abbott, Co-founder and Chief Data Scientist at SmarterHQ",
+    "It is a capital mistake to theorize before one has data. - Sherlock Holmes in 'A study in Scarlet' by Arthur Conan Doyle",
+    "Too often we forget that genius, too, depends upon the data within its reach, that even Archimedes could not have devised Edison’s inventions. - Ernest Dimnet",
+    "With data collection, ‘the sooner the better’ is always the best answer. - Marissa Mayer, IT executive and co-founder of Lumi Labs",
+    "Contact data ages like fish, not wine... it gets worse as it gets older, not better",
+    "Torture the data, and it will confess to anything. - Ronald Coase",
+    "The data analysis motto: If at first, you don’t succeed; call it version 1.0",
+    "A SQL query walks into a bar, walks up to two tables, and asks, “Can I join you?”",
+    "Why should you take a data scientist with you into the jungle? Answer: They can take care of Python problems",
+    "If you can't explain it to a six-year-old, you don't understand it well enough. - Albert Einstein",
+    "The question is not: 'What are the findings?' but 'Why is the data messy'",
+    ""
+  ];
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById("data-quote").innerText = randomQuote;
+});
