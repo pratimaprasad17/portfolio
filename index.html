@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratima Prasad | Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/icon.jpg" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const titles = document.querySelectorAll('.dynamic-title');
+      let currentIndex = 0;
+
+      function changeTitle() {
+        // Hide all titles
+        titles.forEach(title => title.classList.remove('active'));
+
+        // Show the current title
+        titles[currentIndex].classList.add('active');
+
+        // Move to the next title
+        currentIndex = (currentIndex + 1) % titles.length;
+      }
+
+      // Change title every 3 seconds
+      setInterval(changeTitle, 1750);
+
+      // Initialize with the first title visible
+      changeTitle();
+    });
+  </script>
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/data-analyst-dp.jpg" alt="Pratima Prasad" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Pratima Prasad">Pratima Prasad</h1>
+          <br>
+          <div class="title-container">
+            <p class="dynamic-title">Data Analyst</p>
+            <p class="dynamic-title">Business Intelligence Developer</p>
+            <p class="dynamic-title">Data Visualization Specialist</p>
+            <p class="dynamic-title">Business Analyst</p>
+            <p class="dynamic-title">Analytics Specialist</p>
+            <p class="dynamic-title">Research Analyst</p>
+          </div>
+          <br>
+          </div>
+        
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:pprasa11@asu.edu" class="contact-link">pprasa11@asu.edu</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Arizona, United States</address>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Current Timezone</p>
+               <p id="local-time" class="contact-link">Loading...</p>
+               <address>UTC−07:00 (MST)</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/pratima-prasad/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/pratimaprasad17" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/lensart_101" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://x.com/pratimaprasad17" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link="about">About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="resume">Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="projects">Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="certifications">Certifications</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+    <!--
+        - #ABOUT
+    -->
+
+    <article class="about active" data-page="about">
+
+      <header>
+        <h2 class="h2 article-title">About Me</h2>
+      </header>
+
+      <section class="about-text">
+        <h3>
+          Data analyst with a business brain and a visual eye.
+        </h3>
+        <br>
+        <p>
+          I’m Pratima Prasad - a data analyst who believes that every dataset hides a story worth uncovering. With over 5 years in data analytics and BI (Power BI, SAP BI, SQL), I’ve worked across sectors like public infrastructure, logistics, and utilities to transform raw data into insights that actually get used.
+        </p>
+
+        <p>
+          Right now, I’m consulting for a US-based transportation organization that advocates for the needs of rail passengers, building Power BI dashboards that support rail feasibility across communities. Before that, I led data reporting initiatives at SAP, helping boost stakeholder visibility, streamline operations, and reduce reporting latency. 
+        </p>
+
+        <p>
+          I enjoy bringing both business logic and visual clarity to complex data problems. Beyond the numbers? You’ll find me with a camera in hand, exploring new places, or diving into a foosball match.
+        </p>  
+
+        <p>
+          This portfolio is a window into the kind of work I love - where data meets design, and analysis becomes action. Take a look around, and let’s connect if you see alignment.
+        </p>
+        <div class="resume-btn-wrapper">
+          <a href="./assets/images/Pratima-Prasad-Resume.pdf" download class="btn-resume">
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </section>
+      <!--
+        - service
+      -->
+
+      <section class="service">
+
+        <h3 class="h3 service-title">What I Am Doing</h3>
+
+        <ul class="service-list">
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-dev.svg" alt="data analytics icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Data Analytics</h4>
+
+              <p class="service-item-text">
+                Transforming raw data into meaningful insights using statistical techniques, predictive modeling, and advanced analytics to drive data-driven decision-making.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-dv.svg" alt="data visualization icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Data Visualization</h4>
+
+              <p class="service-item-text">
+                Designing and developing dynamic, interactive dashboards using advanced visualization techniques to translate complex data into actionable insights, enabling data-driven decision-making and strategic planning.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-app.svg" alt="business intelligence & reporting icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Business Intelligence & Reporting</h4>
+
+              <p class="service-item-text">
+                Designing and optimizing data-driven reports using SQL, BI tools, and data modeling techniques to ensure data accuracy, improve analytical efficiency, and facilitate insightful data exploration.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-ml.svg" alt="etl & data processing icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">ETL & Data Processing</h4>
+
+              <p class="service-item-text">
+                Developing scalable ETL pipelines and automating data workflows using Python, SQL, and SAP Data Services to ensure seamless data integration and transformation.
+              </p>
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+              <!--
+                - testimonials modal
+              -->
+
+              <div class="modal-container" data-modal-container>
+
+                <div class="overlay" data-overlay></div>
+
+                <section class="testimonials-modal">
+
+                  <button class="modal-close-btn" data-modal-close-btn>
+                    <ion-icon name="close-outline"></ion-icon>
+                  </button>
+
+                  <div class="modal-img-wrapper">
+                    <figure class="modal-avatar-box">
+                      <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                    </figure>
+
+                    <img src="./assets/images/icon-quote.svg" alt="quote icon">
+                  </div>
+
+                  <div class="modal-content">
+
+                    <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                    <time datetime="2021-06-14">14 June, 2021</time>
+
+                    <div data-modal-text>
+                      <p>
+                       </p>
+                    </div>
+
+                  </div>
+
+                </section>
+
+              </div>        
+        
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+        
+          <ol class="timeline-list">
+        
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Arizona State University, Tempe, AZ, USA</h4>
+              <p class="timeline-text">
+                Master of Science (MS) in Computer Science
+              </p>
+              <span>August 2023 – May 2025</span>
+              <ul class="timeline-text-list">
+                <li>Achieved a CGPA of 4.0</li>
+                <!-- <li>Relevant coursework includes Data Processing at Scale, Data Visualization, Fundamentals of Statistical Learning and Pattern Recognition, Data Mining,
+                Data Intensive Systems for Machine Learning, Cloud Computing, Software Security, Natural Language Processing, Software Verification Validation and Testing, Knowledge Representation and Reasoning</li> -->
+              </ul>
+            </li>
+        
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Kalinga Institute of Industrial Technology, Odisha, India</h4>
+              <p class="timeline-text">
+                Bachelor of Technology (B.Tech) in Computer Science
+              </p>
+              <span>August 2013 – May 2017</span>
+              <ul class="timeline-text-list">
+                <li>Achieved a CGPA of 3.7</li>
+            </ul>
+            </li>        
+          </ol>
+        </section>
+        
+        <section class="timeline">        
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+        
+          <ol class="timeline-list">
+        
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Data Analytics Consultant</h4>
+              <h4 class="timeline-text">Integrated Travel, USA</h4>
+              <span>July 2025 – Present</span>
+              <ul class="timeline-text-list">
+                <li>Modeled ridership demand using Excel regressions for multiple route scenarios.</li>
+                <li>Built Power BI dashboards to visualize station reach and modal connections.</li>
+                <li>Mapped grant eligibility by filtering provincial/federal funding data.</li>
+                <li>Ran cost-revenue sensitivity tests to validate financial viability.</li>
+                <li>Cleaned and merged tourism, census, and transit datasets for analysis.</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Business Process Consultant</h4>
+              <h4 class="timeline-text">SAP America, Philadelphia PA, USA</h4>
+              <span>January 2023 – March 2023</span>
+              <ul class="timeline-text-list">
+                <li>Documented end-to-end P2P and O2C processes, mapping key data flows and system touchpoints.</li>
+                <li>Collaborated with ERP and SAP BI teams to align process requirements with dashboard development.</li>
+                <li>Conducted fit-gap analysis and user interviews to capture reporting needs across global business units.</li>
+                <li>Created process diagrams, functional specs, and data dictionaries to guide development and QA teams.</li>
+                <li>Supported data conversion and cleansing efforts during system migration, ensuring reporting continuity.</li>
+                <li>Developed client-ready deliverables and audit logs as part of solution validation and testing cycles.</li>
+              </ul>
+            </li>
+        
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Data Analyst</h4>
+              <h4 class="timeline-text">SAP Labs, Bengaluru, India</h4>
+              <span>July 2022 – July 2023</span>
+              <ul class="timeline-text-list">
+                <li>Created custom dashboards in SAP Analytics Cloud to visualize sales, inventory, and financial data across North American regions.</li>
+                <li>Built SQL queries and Excel models to track supplier performance, demand patterns, and cost optimization metrics.</li>
+                <li>Cleaned, merged, and transformed raw SAP data into actionable insights for reporting and executive presentations.</li>
+                <li>Designed storyboards and report templates used across 5+ departments to standardize analytics workflows.</li>
+                <li>Conducted A/B testing and comparative analysis for sales and service teams, informing key pricing and bundling decisions.</li>
+                <li>Delivered insights that contributed to a 15% increase in forecasting accuracy and improved cross-region visibility.</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Business Intelligence Developer / Data Analyst</h4>
+              <h4 class="timeline-text">SAP Labs, Bengaluru, India</h4>
+              <span>June 2019 – June 2022</span>
+              <ul class="timeline-text-list">
+                <li>Developed and maintained 50+ dashboards and reports using SAP BO, WebI, and SAP Analytics Cloud for public sector, logistics, and energy clients</li>
+                <li>Optimized SAP HANA queries and ETL pipelines, reducing data latency by 30% across business units.</li>
+                <li>Led SAP Analytics Cloud migration projects, standardizing KPI visualizations across departments.</li>
+                <li>Collaborated with cross-functional teams to gather BI requirements, document business logic, and troubleshoot data discrepancies.</li>
+                <li>Created and maintained business requirement documents (BRDs), mapping business processes to reporting objectives.</li>
+                <li>Delivered 30+ internal training workshops, enabling 100+ users to self-serve reports and interpret KPIs effectively.</li>
+              </ul>
+            </li>
+          </ol>
+          <section class="about-text">
+              <div class="resume-btn-wrapper">
+                <a href="./assets/images/Pratima-Prasad-Resume.pdf" download class="btn-resume">
+                  <ion-icon name="download-outline"></ion-icon>
+                  <span>Download Resume</span>
+                </a>
+              </div>
+            </section>
+          <section class="skills">
+            <h3 class="h3 skills-title">Skills</h3>
+            <div class="skills-list">
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Java</h5>
+                </div>
+              </div>
+              
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Python</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">HTML/CSS</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">SQL</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">C++</h5>
+                </div>
+              </div>
+              
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">JavaScript</h5>
+                </div>
+              </div>
+              
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Data Visualization</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Data Analysis</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Data Modeling and ETL</h5>
+                </div>
+              </div>
+          
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Data Visualization</h5>
+                </div>
+              </div>
+              
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">SAP Business Objects</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Amazon Web Services</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">PostgreSQL</h5>
+                </div>
+              </div>
+              
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">MySQL</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">NLP</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Predictive Analytics</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Data Cleansing</h5>
+                </div>
+              </div>
+
+              <div class="skills-item">
+                <div class="skills-content-box">
+                  <h5 class="skills-item-title">Google Colab</h5>
+                </div>
+              </div>
+
+              <div>
+               </div> 
+            </div>
+          </section>
+          
+          <section class="technologies">
+            <h3 class="h3 technologies-title">Technologies</h3>
+            <div class="technologies-list">
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Power BI</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Tableau</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">D3.js</h5>
+                </div>
+              </div>
+              
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">SAP Analytics Cloud</h5>
+                </div>
+              </div>
+              
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">MongoDB</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">TensorFlow</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Docker</h5>
+                </div>
+              </div>
+
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Azure</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">PyTorch</h5>
+                </div>
+              </div>
+              
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">TensorFlow</h5>
+                </div>
+              </div>
+
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Spark</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Postgresql</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">NumPy</h5>
+                </div>
+              </div>
+
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">VirtualBox</h5>
+                </div>
+              </div>
+          
+              <div class="technologies-item">
+                <div class="technologies-content-box">
+                  <h5 class="technologies-item-title">Git</h5>
+                </div>
+              </div>
+            </div>
+          </section>
+                                               
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <!-- <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            
+            <li class="filter-item">
+              <button data-filter-btn>Machine Learning</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Data Analysis and Visualization</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+
+
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article> -->
+      <article class="projects" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+      
+        <section class="projects-section">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Data Visualization</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Data Engineering</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Machine Learning</button>
+            </li>
+          </ul>
+      
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+      
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Data Visualization</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Data Engineering</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Machine Learning</button>
+              </li>
+            </ul>
+          </div>
+      
+          <ul class="project-list">
+            <!-- Machine Learning Projects -->
+
+
+            <li class="project-item active" data-filter-item data-category="data visualization">
+              <a href="https://github.com/pratimaprasad17/Data-Visualization-Analytics-Dashboard" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/sthimark.png" alt="Visual Analytics Dashboard" loading="lazy">
+                </figure>
+                <h3 class="project-title">Visual Analytics Dashboard - IEEE VAST Challenge 2019</h3>
+                <p class="project-category">Data Analysis and Visualization</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="data visualization">
+              <a href="https://github.com/pratimaprasad17/powerbi-dashboard-university-enrolment-analysis" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/powerbi-asu-dashboard.png" alt="Power BI Dashboard" loading="lazy">
+                </figure>
+                <h3 class="project-title">Admissions Dashboard: Who Got In & Who Showed Up?</h3>
+                <p class="project-category">Data Analysis and Visualization</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="data engineering">
+              <a href="https://github.com/pratimaprasad17/Real-Time-Graph-Analytics" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-de1.png" alt="Real Time Graph Analytics" loading="lazy">
+                </figure>
+                <h3 class="project-title">Data Processing Pipeline for Real Time Graph Analytic</h3>
+                <p class="project-category">Data Engineering</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="data engineering">
+              <a href="https://github.com/pratimaprasad17/Geospatial-Hot-Spot-Analysis" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-de2.jpg" alt="Geospatial-Hot-Spot-Analysis" loading="lazy">
+                </figure>
+                <h3 class="project-title">Geospatial Hot-Spot Analysis</h3>
+                <p class="project-category">Data Engineering</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/pratimaprasad17/Data-Partitioning-and-Query-Optimization-using-PostgreSQL" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-ml4.jpg" alt="Reranking: Yet Another Performance Boost" loading="lazy">
+                </figure>
+                <h3 class="project-title">Reranking: Yet Another Performance Boost</h3>
+                <p class="project-category">Machine Learning</p>
+              </a>
+            </li>
+<!--       
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/Soham1712/Sentiment-Analysis">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/audiolytic.png" alt="Sentiment Based Music Recommendation" loading="lazy">
+                </figure>
+                <h3 class="project-title">Sentiment Based Music Recommendation System</h3>
+                <p class="project-category">Data Engineering</p>
+              </a>
+            </li>
+      
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="https://github.com/Soham1712/Reserch-Paper-Classification-using-GCN">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/gcn.png" alt="Research Paper Classification" loading="lazy">
+                </figure>
+                <h3 class="project-title">Research Paper Classification Using Graph Convolution Networks</h3>
+                <p class="project-category">Machine Learning</p>
+              </a>
+            </li>
+      
+            <li class="project-item active" data-filter-item data-category="software development">
+              <a href="https://github.com/Soham1712/Disaster-At-StHimark-Visual-Analytics-Dashboard">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/sthimark.png" alt="Visual Analytics Dashboard" loading="lazy">
+                </figure>
+                <h3 class="project-title">Visual Analytics Dashboard - IEEE VAST Challenge 2019</h3>
+                <p class="project-category">Data Analysis and Visualization</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="software development">
+              <a href="https://github.com/Soham1712/Financial-Dashboard">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.jpg" alt="Financial Dashboard" loading="lazy">
+                </figure>
+                <h3 class="project-title">Financial Dashboard</h3>
+                <p class="project-category">Data Analysis and Visualization</p>
+              </a>
+            </li>
+       -->
+            <!-- <li class="project-item active" data-filter-item data-category="software development">
+              <a href="https://github.com/Soham1712/FoodOrderingWebsite">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/foodfrenzy.png" alt="Food Ordering System" loading="lazy">
+                </figure>
+                <h3 class="project-title">Food Ordering System</h3>
+                <p class="project-category">Software Development</p>
+              </a>
+            </li> -->
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="certifications" data-page="certifications">
+      
+      
+        <!-- Certifications Section -->
+        
+        
+  <header>
+    <h2 class="h2 article-title">Certifications</h2>
+  </header>
+
+  <section class="blog-posts">
+
+    <ul class="blog-posts-list">
+
+      <li class="blog-post-item">
+        <a href="https://learn.microsoft.com/api/credentials/share/en-gb/PratimaPrasad-2312/50FDB54FD7EA7611?sharingId=40FC6A65997241BA" target="_blank">
+
+          <figure class="blog-banner-box">
+            <img src="./assets/images/Microsoft-Power-BI.png" alt="Microsoft Certified - Power BI Data Analyst" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-meta">
+              <p class="blog-category">Certification</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2023-01-01">June 2025 - June 2026</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">Microsoft Certified - Power BI Data Analyst</h3>
+
+            <p class="blog-text">
+              Earned from Microsoft, this certification demonstrates proficiency in preparing, modeling, analyzing and visualing data in Power BI as well as manage and secure the platform.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="blog-post-item">
+        <a href="https://coursera.org/share/8a798d73c843fd6ede2750ed596751fa" target="_blank">
+
+          <figure class="blog-banner-box">
+            <img src="./assets/images/Microsoft-Excel.png" alt="Preparing Data for Analysis with Microsoft Excel" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-meta">
+              <p class="blog-category">Certification</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2023-02-01">April 2025</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">Preparing Data for Analysis with Microsoft Excel</h3>
+
+            <p class="blog-text">
+              Earned through Coursera, this certification highlights essential Excel elements and techniques that help prepare data for analysis in tools such as Power BI.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="blog-post-item">
+        <a href="https://coursera.org/share/7355b8119528c393a82e635b747ad296" target="_blank">
+
+          <figure class="blog-banner-box">
+            <img src="./assets/images/sql-data-analyst.png" alt="SQL for Data Analysts" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-meta">
+              <p class="blog-category">Certification</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2023-03-01">April 2025</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">SQL for Data Analysts</h3>
+
+            <p class="blog-text">
+              Earned through Coursera, provided by Corporate Finance Institute (CFI), this certification covers principles of reading & transforming data and gathering insights from a company database..
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="blog-post-item">
+        <a href="https://coursera.org/share/f734d4935537be524f63837d13a68006" target="_blank">
+
+          <figure class="blog-banner-box">
+            <img src="./assets/images/data-modeling-powerbi.png" alt="Data Modeling in Power BI" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-meta">
+              <p class="blog-category">Certification</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2025-05-21">May 2025</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">Data Modeling in Power BI</h3>
+
+            <p class="blog-text">
+              Earned through Coursera and provided by Microsoft, this certification demonstrates skills such as data modeling using Star Schema, writing DAX calculations to create elements and analyze in Power BI and also optimize performance of a Power BI model.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="blog-post-item">
+        <a href="https://coursera.org/share/ac782932fdb22e8e85477f3a6dbf0cea" target="_blank">
+
+          <figure class="blog-banner-box">
+            <img src="./assets/images/data-everywhere-google.png" alt="Data, Data, Everywhere" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-meta">
+              <p class="blog-category">Certification</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2025-03-23">March 2025</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">Data, Data, Everywhere</h3>
+
+            <p class="blog-text">
+              Earned through Coursera and provided by Google, this certification demonstrates a foundational understanding of data analytics concepts, tools, roles, and analytical thinking through practical, job-relevant examples..
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+    </ul>
+
+  </section>
+      </article>
+      
+
+
+
+
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contactp" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="contactp-card">
+          <h3 class="h3 contactp-title">Contact Information</h3>
+          
+          <div class="contactp-details">
+            <div class="contactp-item">
+              <ion-icon name="person-outline" class="contactp-icon"></ion-icon>
+              <span class="contactp-text">Pratima Prasad</span>
+            </div>
+        
+            <!-- <div class="contactp-item">
+              <ion-icon name="mail-outline" class="contactp-icon"></ion-icon>
+              <a href="mailto:pprasa11@asu.edu" class="contactp-text">pprasa11@asu.edu</a>
+            </div>
+        
+            <div class="contactp-item">
+              <ion-icon name="mail-outline" class="contactp-icon"></ion-icon>
+              <a href="mailto:pratima.p1709@gmail.com" class="contactp-text">pratima.p1709@gmail.com</a>
+            </div> -->
+
+            <div class="contactp-item">
+              <ion-icon name="mail-outline" class="contactp-icon"></ion-icon>
+              <div class="contactp-text" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="mailto:pprasa11@asu.edu">pprasa11@asu.edu</a>
+                <span>|</span>
+                <a href="mailto:pratima.p1709@gmail.com">pratima.p1709@gmail.com</a>
+              </div>
+            </div>
+
+
+<!--         
+            <div class="contactp-item">
+              <ion-icon name="call-outline" class="contactp-icon"></ion-icon>
+              <span class="contactp-text">+1 623-272-7691</span>
+            </div> -->
+        
+            <div class="contactp-item">
+              <ion-icon name="logo-linkedin" class="contactp-icon"></ion-icon>
+              <a href="https://www.linkedin.com/in/pratima-prasad/" class="contactp-text" target="_blank">LinkedIn</a>
+            </div>
+
+            <div class="contactp-item">
+              <ion-icon name="logo-github" class="contactp-icon"></ion-icon>
+              <a href="https://github.com/pratimaprasad17" class="contactp-text" target="_blank">GitHub</a>
+            </div>
+
+            <div class="contactp-item">
+              <ion-icon name="logo-twitter" class="contactp-icon"></ion-icon>
+              <a href="https://x.com/pratimaprasad17" class="contactp-text" target="_blank">It's what's happening / X</a>
+            </div>
+            
+            <div class="contactp-item">
+              <ion-icon name="logo-instagram" class="contactp-icon"></ion-icon>
+              <a href="https://www.instagram.com/lensart_101" class="contactp-text" target="_blank">Instagram</a>
+            </div>
+          </div>
+        </section>
+         
+        
+        
+
+        <!-- <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section> -->
+
+        <!-- <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section> -->
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

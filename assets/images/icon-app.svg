@@ -1,0 +1,30 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Screen Background -->
+  <rect x="1" y="5" width="38" height="22" rx="2" fill="url(#background_gradient)" />
+  <!-- Screen -->
+  <rect x="3" y="7" width="34" height="16" rx="1" fill="black" />
+  <rect x="3" y="7" width="34" height="16" rx="1" stroke="url(#border_gradient)" stroke-width="2" fill="none" />
+  <!-- Stand -->
+  <rect x="18" y="27" width="4" height="1" fill="url(#stand_gradient)" />
+  <!-- Base -->
+  <rect x="10" y="28" width="20" height="2" fill="url(#base_gradient)" />
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="background_gradient" x1="1" y1="5" x2="39" y2="27" gradientUnits="userSpaceOnUse">
+      <stop offset="0.259336" stop-color="#FFDB6E" />
+      <stop offset="1" stop-color="#FFBC5E" />
+    </linearGradient>
+    <linearGradient id="border_gradient" x1="3" y1="7" x2="37" y2="23" gradientUnits="userSpaceOnUse">
+      <stop offset="0.259336" stop-color="#FFDB6E" />
+      <stop offset="1" stop-color="#FFBC5E" />
+    </linearGradient>
+    <linearGradient id="stand_gradient" x1="18" y1="27" x2="22" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFDB6E" />
+      <stop offset="1" stop-color="#FFBC5E" />
+    </linearGradient>
+    <linearGradient id="base_gradient" x1="10" y1="28" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFDB6E" />
+      <stop offset="1" stop-color="#FFBC5E" />
+    </linearGradient>
+  </defs>
+</svg>

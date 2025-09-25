@@ -1,0 +1,9 @@
+<svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bars -->
+  <rect x="12" y="30" width="8" height="20" fill="#FFBC5E"/>
+  <rect x="26" y="20" width="8" height="30" fill="#FFBC5E"/>
+  <rect x="40" y="10" width="8" height="40" fill="#FFBC5E"/>
+  
+  <!-- Line following the trend of the bars with space -->
+  <path d="M12 28 L26 18 L40 8" stroke="#FFBC5E" stroke-width="2"/>
+</svg>
