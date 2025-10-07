@@ -966,8 +966,8 @@ main {
  */
 
  .skills-title, .technologies-title {
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .skills-list, .technologies-list {
@@ -977,34 +977,71 @@ main {
   padding: 20px;
 }
 
-.skills-item, .technologies-item {
-  background: var(--jet);
-  padding: 20px;
-  border-radius: 14px;
+.skills-item {
+  /* background: var(--jet); */
+  padding: 2px;
+  border-radius: 2px;
   box-shadow: var(--shadow-2);
-  width: 200px; /* Adjust width as needed */
+  width: 75px; /* Adjust width as needed */
   text-align: center;
-  color: var(--light-gray);
+  /* color: var(--light-gray); */
+}
+
+.skills-item-sap {
+  /* background: var(--jet); */
+  /* padding: 2px; */
+  border-radius: 2px;
+  box-shadow: var(--shadow-2);
+  width: 125px; /* Adjust width as needed */
+  text-align: center;
+  /* color: var(--light-gray); */
+}
+
+.technologies-item {
+  /* background: var(--jet); */
+  padding: 2px;
+  border-radius: 2px;
+  box-shadow: var(--shadow-2);
+  width: 175px; /* Adjust width as needed */
+  text-align: center;
+  /* color: var(--light-gray); */
 }
 
 .skills-item::before, .technologies-item::before {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  /* background: var(--bg-gradient-jet); */
   border-radius: inherit;
   z-index: -1;
 }
 
 .skills-content-box, .technologies-content-box {
   display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
   flex-direction: column;
   align-items: center;
 }
 
-.skills-item-title, .technologies-item-title {
-  margin-bottom: 10px;
-  font-size: var(--fs-5);
+.skills-content-box-sap {
+  display: flex;
+  /* padding: 5px; */
+  border-radius: 5px;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-item-title {
+  margin-bottom: 5px;
+  font-size: var(--fs-8);
+}
+
+.technologies-item-title {
+  margin-bottom: 5px;
+  font-size: var(--fs-7);
 }
 
 .skills-item-text, .technologies-item-text {
@@ -2192,6 +2229,20 @@ margin-top: 0.5rem;
 	 */
 
   .timeline-text { max-width: 700px; }
+
+  .skills-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* filter: grayscale(100%) brightness(0.9); */
+  }
+
+  .skills-item:hover .skills-logo {
+    transform: scale(1.1);
+    /* filter: grayscale(0%) brightness(1); */
+  }
 
 }
 
